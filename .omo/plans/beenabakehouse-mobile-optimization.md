@@ -92,3 +92,29 @@
 F1. [x] Build and lint verification — npm run build passes, zero TypeScript errors
 F2. [x] Mobile QA — CustomCursor returns null on touch, hamburger works, form inputs 16px, touch targets >=44px
 F3. [x] Desktop regression — desktop layout unchanged, Nav shows full links, animations play, all sections render at >=1024px
+
+## Hotfix: Hero Redesign Restoration + Lighter Overlay
+
+**Problem**: The Hero redesign from TODO 0 was accidentally reverted during this session when `git checkout -- src/sections/Hero.tsx` was run to undo a direct `scroll-mt-20` edit. This reverted ALL uncommitted Hero changes — the parallax, editorial stacked type, per-line reveal, and lighter gradient were lost. The live site now shows the OLD hero with a heavy white overlay (0.55→0.78→0.96 opacity) that washes out the bakery photo.
+
+**Fix needed**:
+
+HF1. [x] Rewrite `src/sections/Hero.tsx` to restore the redesign with a LIGHTER gradient overlay
+    - Re-add imports: `useScroll, useTransform` from `framer-motion`, `useRef` from `react`
+    - Add parallax: `useScroll` with `offset: ["start start", "end start"]`, `useTransform` for `bgScale` (1→1.08) and `bgY` (0%→15%), disabled on mobile and reduced motion
+    - Replace gradient overlay with LIGHTER values: `from-[rgba(251,247,240,0.15)] via-[rgba(251,247,240,0.35)] to-[rgba(251,247,240,0.82)]` — photo clearly visible at top, text legible at bottom
+    - Restore editorial stacked headline: per-line slide-up reveal using `lineVariants`, `titleLines.map()`, `clamp()` font sizing
+    - Restore `min-h-[85vh] md:min-h-screen` (was `min-h-svh`)
+    - Restore `self-end md:self-center` content positioning (was `self-center`)
+    - Restore `gap-[clamp(1.5rem,3vw,2.5rem)]` content gap (was `gap-[2.5rem]`)
+    - Restore responsive clamp() sizing on eyebrow, subtitle, and stat bar text
+    - Keep `scroll-mt-20` on the `<header>` element
+    - Keep `width={2000} height={1333}` on the hero image
+    - Add `will-change-transform` class to background image
+    - Replace `initial`/`animate` on background image with `style={{ scale: bgScale, y: bgY }}`
+
+HF2. [x] Build verification — `npm run build` passes with zero errors
+
+HF3. [ ] Visual QA — launch dev server, screenshot hero, confirm bakery photo is visible through the lighter overlay and text is still legible
+
+HF4. [ ] Commit and push to GitHub main — `fix: restore hero redesign with lighter gradient overlay`
