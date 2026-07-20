@@ -7,7 +7,7 @@ export function Testimonials() {
   const { testimonials } = site;
 
   return (
-    <section className="bg-surface rounded-[clamp(1rem,3vw,2rem)] mx-[clamp(1rem,4vw,4rem)] p-[clamp(3rem,7vw,6rem)] pt-[clamp(5rem,12vw,11rem)] pb-[clamp(5rem,12vw,11rem)]" id="testimonials" aria-label="Testimonials">
+    <section className="bg-surface rounded-[clamp(1rem,3vw,2rem)] mx-[clamp(1rem,4vw,4rem)] p-[clamp(3rem,7vw,6rem)] pt-[clamp(5rem,12vw,11rem)] pb-[clamp(5rem,12vw,11rem)] scroll-mt-20" id="testimonials" aria-label="Testimonials">
       <div className="flex flex-col gap-4 mb-12 max-w-[50ch]">
         <span className="font-mono text-eyebrow tracking-[0.18em] uppercase text-ink-muted inline-flex items-center gap-[0.6rem]">{testimonials.eyebrow}</span>
         <motion.h2

@@ -39,6 +39,6 @@ export function scrollToId(id: string) {
   const target = document.getElementById(id);
   if (!target) return;
   const lenis = (window as unknown as { __lenis?: Lenis }).__lenis;
-  if (lenis) lenis.scrollTo(target, { offset: -20 });
+  if (lenis) lenis.scrollTo(target, { offset: -80 });
   else target.scrollIntoView({ behavior: "smooth" });
 }

@@ -16,7 +16,7 @@ export function Story() {
   };
 
   return (
-    <section className="relative pt-[clamp(5rem,12vw,11rem)] pb-[clamp(5rem,12vw,11rem)] px-[clamp(1.25rem,5vw,6rem)]" id="story" aria-label="Our story">
+    <section className="relative pt-[clamp(5rem,12vw,11rem)] pb-[clamp(5rem,12vw,11rem)] px-[clamp(1.25rem,5vw,6rem)] scroll-mt-20" id="story" aria-label="Our story">
       <div className="max-w-[1280px] mx-auto">
         <motion.span
           className="font-mono text-eyebrow tracking-[0.18em] uppercase text-ink-muted inline-flex items-center gap-[0.6rem] mb-5"
@@ -44,8 +44,8 @@ export function Story() {
             <img
               src={story.images[0].url}
               alt={story.images[0].alt}
-              width={1280}
-              height={1600}
+              width={800}
+              height={600}
               loading="lazy"
               decoding="async"
               className="w-full h-full object-cover motion-safe:animate-[kenburns_8s_ease-in-out_infinite_alternate]"

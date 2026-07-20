@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, MotionConfig } from "framer-motion";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SmoothScroll } from "./lib/SmoothScroll";
@@ -84,24 +84,26 @@ function App() {
 
       <CustomCursor />
       <SmoothScroll>
-        <AnimatePresence>
-          {!loaded && <KineticLoader onDone={() => setLoaded(true)} />}
-        </AnimatePresence>
+        <MotionConfig reducedMotion="user">
+          <AnimatePresence>
+            {!loaded && <KineticLoader onDone={() => setLoaded(true)} />}
+          </AnimatePresence>
 
-        <PageCurtain />
+          <PageCurtain />
 
-        <Nav />
-        <main>
-          <Hero />
-          <Story />
-          <SignatureCakes />
-          <Menu />
-          <Gallery />
-          <Process />
-          <Testimonials />
-          <VisitContact />
-        </main>
-        <Footer />
+          <Nav />
+          <main>
+            <Hero />
+            <Story />
+            <SignatureCakes />
+            <Menu />
+            <Gallery />
+            <Process />
+            <Testimonials />
+            <VisitContact />
+          </main>
+          <Footer />
+        </MotionConfig>
       </SmoothScroll>
     </>
   );

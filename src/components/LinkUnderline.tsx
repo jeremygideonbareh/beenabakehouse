@@ -54,7 +54,7 @@ export function MagneticLink({
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseLeave}
       style={{ x: sx, y: sy }}
-      className={`relative inline-block text-ink no-underline ${className}`.trim()}
+      className={`relative inline-block text-ink no-underline min-h-[44px] ${className}`.trim()}
       target={target}
       rel={rel}
       aria-label={rest["aria-label"]}

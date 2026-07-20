@@ -1,0 +1,15 @@
+{
+  "schema_version": 2,
+  "active_work_id": "beenabakehouse-mobile-optimization",
+  "works": {
+    "beenabakehouse-mobile-optimization": {
+      "work_id": "beenabakehouse-mobile-optimization",
+      "active_plan": "C:\\Users\\cloud\\OneDrive\\Desktop\\Hybrid_Second_Brain\\clients website\\beenasbakehouse\\.omo\\plans\\beenabakehouse-mobile-optimization.md",
+      "plan_name": "beenabakehouse-mobile-optimization",
+      "session_ids": ["opencode:ses_07fa8e81effep3z3EfjtHOcLGt"],
+      "status": "active",
+      "worktree_path": null,
+      "started_at": "2026-07-20T19:16:36.959Z"
+    }
+  }
+}

@@ -27,7 +27,7 @@ export function Process() {
   }, [reduced]);
 
   return (
-    <section className="relative pt-[clamp(5rem,12vw,11rem)] pb-[clamp(5rem,12vw,11rem)] px-[clamp(1.25rem,5vw,6rem)]" id="process" aria-label="Our baking process">
+    <section className="relative pt-[clamp(5rem,12vw,11rem)] pb-[clamp(5rem,12vw,11rem)] px-[clamp(1.25rem,5vw,6rem)] scroll-mt-20" id="process" aria-label="Our baking process">
       <div className="max-w-[1280px] mx-auto mb-[clamp(3rem,6vw,5rem)] flex flex-col gap-5">
         <span className="font-mono text-eyebrow tracking-[0.18em] uppercase text-ink-muted inline-flex items-center gap-[0.6rem]">{process.eyebrow}</span>
         <motion.h2
@@ -72,8 +72,8 @@ export function Process() {
               <img
                 src={img.url}
                 alt={img.alt}
-                width={1280}
-                height={880}
+                width={600}
+                height={400}
                 loading="lazy"
                 decoding="async"
                 className="w-full h-full object-cover"

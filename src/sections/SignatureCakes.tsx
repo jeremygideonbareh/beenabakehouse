@@ -7,7 +7,7 @@ export function SignatureCakes() {
   const { signature_cakes } = site;
 
   return (
-    <section className="relative py-[clamp(5rem,12vw,11rem)] overflow-hidden" id="signature" aria-label="Signature cakes">
+    <section className="relative py-[clamp(5rem,12vw,11rem)] overflow-hidden scroll-mt-20" id="signature" aria-label="Signature cakes">
       <div className="max-w-[1280px] mx-auto mb-[clamp(2rem,6vw,4rem)] px-[clamp(1.25rem,5vw,6rem)] flex flex-col gap-5">
         <motion.span
           className="font-mono text-eyebrow tracking-[0.18em] uppercase text-ink-muted inline-flex items-center gap-[0.6rem]"
@@ -31,7 +31,7 @@ export function SignatureCakes() {
       </div>
 
       <div
-        className="flex gap-[clamp(1.5rem,3vw,3rem)] px-[clamp(1.25rem,5vw,6rem)] overflow-x-auto snap-x snap-mandatory [&::-webkit-scrollbar]:hidden scrollbar-none"
+        className="flex gap-[clamp(1.5rem,3vw,3rem)] px-[clamp(1.25rem,5vw,6rem)] overflow-x-auto snap-x snap-mandatory scrollbar-hide [&::-webkit-scrollbar]:hidden scrollbar-none"
         data-cursor="croissant"
         role="list"
         aria-label="Signature cakes carousel — scroll horizontally"
@@ -39,7 +39,7 @@ export function SignatureCakes() {
         {signature_cakes.items.map((item, i) => (
           <motion.article
             key={item.name}
-            className="group flex-[0_0_clamp(280px,32vw,380px)] snap-start flex flex-col gap-4 bg-transparent"
+            className="group flex-[0_0_clamp(280px,32vw,380px)] snap-center flex flex-col gap-4 bg-transparent"
             role="listitem"
             initial={{ opacity: reduced ? 1 : 0, y: reduced ? 0 : 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -50,13 +50,13 @@ export function SignatureCakes() {
               <img
                 src={item.image.url}
                 alt={item.image.alt}
-                width={600}
-                height={750}
+                width={380}
+                height={500}
                 loading="lazy"
                 decoding="async"
                 className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"
               />
-              <span className="absolute top-4 right-4 px-[0.85rem] py-[0.4rem] bg-background rounded-full font-mono text-[0.68rem] tracking-[0.1em] uppercase text-ink">
+              <span className="absolute top-4 right-4 px-[0.85rem] py-[0.4rem] bg-background rounded-full font-mono text-xs tracking-[0.1em] uppercase text-ink">
                 {item.price_placeholder_inr}
               </span>
             </div>

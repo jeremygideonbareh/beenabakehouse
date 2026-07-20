@@ -11,7 +11,7 @@ export function Menu() {
   const category = menu.categories[active];
 
   return (
-    <section className="bg-surface rounded-[clamp(1rem,3vw,2rem)] mx-[clamp(1rem,4vw,4rem)] p-[clamp(3rem,7vw,6rem)] pt-[clamp(5rem,12vw,11rem)] pb-[clamp(5rem,12vw,11rem)]" id="menu" aria-label="Menu">
+    <section className="bg-surface rounded-[clamp(1rem,3vw,2rem)] mx-[clamp(1rem,4vw,4rem)] p-[clamp(3rem,7vw,6rem)] pt-[clamp(5rem,12vw,11rem)] pb-[clamp(5rem,12vw,11rem)] scroll-mt-20" id="menu" aria-label="Menu">
       <div className="flex flex-col gap-4 max-w-[50ch] mb-12">
         <span className="font-mono text-eyebrow tracking-[0.18em] uppercase text-ink-muted inline-flex items-center gap-[0.6rem]">{menu.eyebrow}</span>
         <motion.h2
@@ -38,7 +38,7 @@ export function Menu() {
         {menu.categories.map((c, i) => (
           <button
             key={c.name}
-            className={`px-4 py-[0.55rem] rounded-full font-mono text-[0.74rem] tracking-[0.1em] uppercase transition-colors duration-300 cursor-pointer ${active === i ? "bg-background text-ink border border-hairline" : "text-ink-muted bg-transparent border border-transparent hover:text-ink"}`}
+            className={`px-4 py-[0.55rem] min-h-[44px] rounded-full font-mono text-[0.74rem] tracking-[0.1em] uppercase transition-colors duration-300 cursor-pointer ${active === i ? "bg-background text-ink border border-hairline" : "text-ink-muted bg-transparent border border-transparent hover:text-ink"}`}
             role="tab"
             aria-selected={active === i}
             onClick={() => setActive(i)}
@@ -61,7 +61,7 @@ export function Menu() {
           {category.items.map((item) => (
             <div className="contents" key={item.name}>
               <dt className="p-4 border-b border-dashed border-hairline font-display text-[1.4rem] text-ink font-[400]">{item.name}</dt>
-              <dd className="p-4 border-b border-dashed border-hairline font-mono text-[0.9rem] tracking-[0.06em] text-ink-muted text-right whitespace-nowrap">{item.price_placeholder_inr}</dd>
+              <dd className="p-4 border-b border-dashed border-hairline font-mono text-sm tracking-[0.06em] text-ink-muted text-right whitespace-nowrap">{item.price_placeholder_inr}</dd>
             </div>
           ))}
         </motion.dl>

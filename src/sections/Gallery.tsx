@@ -17,7 +17,7 @@ export function Gallery() {
   const { gallery } = site;
 
   return (
-    <section className="relative pt-[clamp(5rem,12vw,11rem)] pb-[clamp(5rem,12vw,11rem)] px-[clamp(1.25rem,5vw,6rem)]" id="gallery" aria-label="Gallery">
+    <section className="relative pt-[clamp(5rem,12vw,11rem)] pb-[clamp(5rem,12vw,11rem)] px-[clamp(1.25rem,5vw,6rem)] scroll-mt-20" id="gallery" aria-label="Gallery">
       <div className="max-w-[1280px] mx-auto mb-[clamp(2.5rem,6vw,4rem)] flex flex-col gap-5">
         <span className="font-mono text-eyebrow tracking-[0.18em] uppercase text-ink-muted inline-flex items-center gap-[0.6rem]">{gallery.eyebrow}</span>
         <motion.h2
@@ -31,12 +31,12 @@ export function Gallery() {
         </motion.h2>
       </div>
 
-      <div className="max-w-[1600px] mx-auto px-[clamp(1.25rem,5vw,6rem)] grid grid-cols-6 gap-[clamp(0.6rem,1.4vw,1.2rem)] max-md:grid-cols-2">
+      <div className="max-w-[1600px] mx-auto px-[clamp(1.25rem,5vw,6rem)] grid grid-cols-6 gap-[clamp(0.6rem,1.4vw,1.2rem)] max-md:grid-cols-2 snap-x snap-mandatory scrollbar-hide">
         {gallery.images.map((img, i) => (
           <motion.figure
             key={img.pexels_id}
             className={cn(
-              "relative overflow-hidden rounded-[12px] bg-surface group",
+              "relative overflow-hidden rounded-[12px] bg-surface group snap-center",
               sizeClasses[sizes[i % sizes.length]],
               "max-md:col-span-2 max-md:aspect-[4/3]"
             )}
@@ -52,8 +52,8 @@ export function Gallery() {
             <img
               src={img.url}
               alt={img.alt}
-              width={800}
-              height={600}
+              width={400}
+              height={500}
               loading="lazy"
               decoding="async"
               className="w-full h-full object-cover transition-transform duration-800 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-105"

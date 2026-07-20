@@ -41,7 +41,7 @@ export function VisitContact() {
   };
 
   return (
-    <section className="relative pt-[clamp(5rem,12vw,11rem)] pb-[clamp(5rem,12vw,11rem)] px-[clamp(1.25rem,5vw,6rem)]" id="visit" aria-label="Visit and order">
+    <section className="relative pt-[clamp(5rem,12vw,11rem)] pb-[clamp(5rem,12vw,11rem)] px-[clamp(1.25rem,5vw,6rem)] scroll-mt-20" id="visit" aria-label="Visit and order">
       <div className="max-w-[1280px] mx-auto mb-[clamp(3rem,6vw,5rem)] flex flex-col gap-5">
         <span className="font-mono text-eyebrow tracking-[0.18em] uppercase text-ink-muted inline-flex items-center gap-[0.6rem]">{visit_contact.eyebrow}</span>
         <motion.h2
@@ -107,17 +107,17 @@ export function VisitContact() {
 
           <div className="flex flex-col gap-2">
             <label htmlFor="f-name" className="font-mono text-[0.7rem] tracking-[0.12em] uppercase text-ink-muted">Your name *</label>
-            <input className="px-4 py-[0.85rem] bg-transparent border border-hairline rounded-[10px] text-ink font-body text-[1rem] transition-[border-color,background-color] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] focus:outline-none focus:border-ink focus:bg-white disabled:opacity-50" id="f-name" name="name" required autoComplete="name" disabled={status === "submitting"} />
+            <input className="px-4 py-[0.85rem] bg-transparent border border-hairline rounded-[10px] text-ink font-body text-base transition-[border-color,background-color] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] focus:outline-none focus:border-ink focus:bg-white disabled:opacity-50 h-12" id="f-name" name="name" type="text" required autoComplete="name" inputMode="text" disabled={status === "submitting"} />
           </div>
 
           <div className="flex flex-col gap-2">
             <label htmlFor="f-phone" className="font-mono text-[0.7rem] tracking-[0.12em] uppercase text-ink-muted">Phone *</label>
-            <input className="px-4 py-[0.85rem] bg-transparent border border-hairline rounded-[10px] text-ink font-body text-[1rem] transition-[border-color,background-color] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] focus:outline-none focus:border-ink focus:bg-white disabled:opacity-50" id="f-phone" name="phone" type="tel" required autoComplete="tel" placeholder="+91 ..." disabled={status === "submitting"} />
+            <input className="px-4 py-[0.85rem] bg-transparent border border-hairline rounded-[10px] text-ink font-body text-base transition-[border-color,background-color] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] focus:outline-none focus:border-ink focus:bg-white disabled:opacity-50 h-12" id="f-phone" name="phone" type="tel" required autoComplete="tel" inputMode="tel" placeholder="+91 ..." disabled={status === "submitting"} />
           </div>
 
           <div className="flex flex-col gap-2">
             <label htmlFor="f-cake" className="font-mono text-[0.7rem] tracking-[0.12em] uppercase text-ink-muted">Cake *</label>
-            <select className="px-4 py-[0.85rem] bg-transparent border border-hairline rounded-[10px] text-ink font-body text-[1rem] transition-[border-color,background-color] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] focus:outline-none focus:border-ink focus:bg-white appearance-none cursor-pointer disabled:opacity-50" id="f-cake" name="cake_type" required defaultValue="" disabled={status === "submitting"}>
+            <select className="px-4 py-[0.85rem] bg-transparent border border-hairline rounded-[10px] text-ink font-body text-base transition-[border-color,background-color] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] focus:outline-none focus:border-ink focus:bg-white appearance-none cursor-pointer disabled:opacity-50 h-12" id="f-cake" name="cake_type" required defaultValue="" disabled={status === "submitting"}>
               <option value="" disabled>Choose a cake</option>
               {cakeOptions.map((c) => (
                 <option key={c} value={c}>{c}</option>
@@ -128,16 +128,16 @@ export function VisitContact() {
 
           <div className="flex flex-col gap-2">
             <label htmlFor="f-date" className="font-mono text-[0.7rem] tracking-[0.12em] uppercase text-ink-muted">Preferred date</label>
-            <input className="px-4 py-[0.85rem] bg-transparent border border-hairline rounded-[10px] text-ink font-body text-[1rem] transition-[border-color,background-color] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] focus:outline-none focus:border-ink focus:bg-white disabled:opacity-50" id="f-date" name="preferred_date" type="date" disabled={status === "submitting"} />
+            <input className="px-4 py-[0.85rem] bg-transparent border border-hairline rounded-[10px] text-ink font-body text-base transition-[border-color,background-color] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] focus:outline-none focus:border-ink focus:bg-white disabled:opacity-50 h-12" id="f-date" name="preferred_date" type="date" disabled={status === "submitting"} />
           </div>
 
           <div className="flex flex-col gap-2">
             <label htmlFor="f-msg" className="font-mono text-[0.7rem] tracking-[0.12em] uppercase text-ink-muted">Message</label>
-            <textarea className="px-4 py-[0.85rem] bg-transparent border border-hairline rounded-[10px] text-ink font-body text-[1rem] transition-[border-color,background-color] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] focus:outline-none focus:border-ink focus:bg-white resize-y min-h-[110px] disabled:opacity-50" id="f-msg" name="message" placeholder="Occasion, number of guests, flavour ideas..." disabled={status === "submitting"} />
+            <textarea className="px-4 py-[0.85rem] bg-transparent border border-hairline rounded-[10px] text-ink font-body text-base transition-[border-color,background-color] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] focus:outline-none focus:border-ink focus:bg-white resize-y min-h-[110px] disabled:opacity-50" id="f-msg" name="message" placeholder="Occasion, number of guests, flavour ideas..." disabled={status === "submitting"} />
           </div>
 
           <div className="flex items-center gap-4 flex-wrap">
-            <PillButton type="submit" disabled={status === "submitting"}>
+            <PillButton type="submit" className="min-h-12" disabled={status === "submitting"}>
               {status === "submitting" ? "Sending…" : "Send order"}
             </PillButton>
             {status === "ok" && (

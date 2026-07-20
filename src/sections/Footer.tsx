@@ -30,18 +30,18 @@ export function Footer() {
         <div>
           <h4 className="font-mono text-[0.7rem] tracking-[0.12em] uppercase text-ink-muted m-0 mb-[1.2rem]">Order</h4>
           <ul className="list-none p-0 m-0 flex flex-col gap-[0.6rem]">
-            <li><a href="#visit" className="text-ink no-underline text-[1rem] hover:underline underline-offset-[3px]" onClick={(e) => { e.preventDefault(); scrollToId("visit"); }}>Order a cake</a></li>
-            <li><a href={site.brand.contact.whatsapp_deep_link} className="text-ink no-underline text-[1rem] hover:underline underline-offset-[3px]" target="_blank" rel="noreferrer">WhatsApp</a></li>
-            <li><a href={`tel:${site.brand.contact.phone_primary.replace(/\s/g, "")}`} className="text-ink no-underline text-[1rem] hover:underline underline-offset-[3px]">Call us</a></li>
+            <li><a href="#visit" className="text-ink no-underline text-[1rem] min-h-[44px] inline-flex items-center hover:underline underline-offset-[3px]" onClick={(e) => { e.preventDefault(); scrollToId("visit"); }}>Order a cake</a></li>
+            <li><a href={site.brand.contact.whatsapp_deep_link} className="text-ink no-underline text-[1rem] min-h-[44px] inline-flex items-center hover:underline underline-offset-[3px]" target="_blank" rel="noreferrer">WhatsApp</a></li>
+            <li><a href={`tel:${site.brand.contact.phone_primary.replace(/\s/g, "")}`} className="text-ink no-underline text-[1rem] min-h-[44px] inline-flex items-center hover:underline underline-offset-[3px]">Call us</a></li>
           </ul>
         </div>
 
         <div>
           <h4 className="font-mono text-[0.7rem] tracking-[0.12em] uppercase text-ink-muted m-0 mb-[1.2rem]">About</h4>
           <ul className="list-none p-0 m-0 flex flex-col gap-[0.6rem]">
-            <li><a href="#story" className="text-ink no-underline text-[1rem] hover:underline underline-offset-[3px]" onClick={(e) => { e.preventDefault(); scrollToId("story"); }}>Our 25 years</a></li>
-            <li><a href="#signature" className="text-ink no-underline text-[1rem] hover:underline underline-offset-[3px]" onClick={(e) => { e.preventDefault(); scrollToId("signature"); }}>Signature cakes</a></li>
-            <li><a href="#gallery" className="text-ink no-underline text-[1rem] hover:underline underline-offset-[3px]" onClick={(e) => { e.preventDefault(); scrollToId("gallery"); }}>Gallery</a></li>
+            <li><a href="#story" className="text-ink no-underline text-[1rem] min-h-[44px] inline-flex items-center hover:underline underline-offset-[3px]" onClick={(e) => { e.preventDefault(); scrollToId("story"); }}>Our 25 years</a></li>
+            <li><a href="#signature" className="text-ink no-underline text-[1rem] min-h-[44px] inline-flex items-center hover:underline underline-offset-[3px]" onClick={(e) => { e.preventDefault(); scrollToId("signature"); }}>Signature cakes</a></li>
+            <li><a href="#gallery" className="text-ink no-underline text-[1rem] min-h-[44px] inline-flex items-center hover:underline underline-offset-[3px]" onClick={(e) => { e.preventDefault(); scrollToId("gallery"); }}>Gallery</a></li>
           </ul>
         </div>
 
@@ -57,9 +57,9 @@ export function Footer() {
         <div>
           <h4 className="font-mono text-[0.7rem] tracking-[0.12em] uppercase text-ink-muted m-0 mb-[1.2rem]">Follow</h4>
           <ul className="list-none p-0 m-0 flex flex-col gap-[0.6rem]">
-            <li><a href={site.brand.social.instagram_url} className="text-ink no-underline text-[1rem] hover:underline underline-offset-[3px]" target="_blank" rel="noreferrer">Instagram</a></li>
-            <li><a href={site.brand.social.facebook_url} className="text-ink no-underline text-[1rem] hover:underline underline-offset-[3px]" target="_blank" rel="noreferrer">Facebook</a></li>
-            <li><a href={`mailto:${site.brand.contact.email}`} className="text-ink no-underline text-[1rem] hover:underline underline-offset-[3px]">Email</a></li>
+            <li><a href={site.brand.social.instagram_url} className="text-ink no-underline text-[1rem] min-h-[44px] inline-flex items-center hover:underline underline-offset-[3px]" target="_blank" rel="noreferrer">Instagram</a></li>
+            <li><a href={site.brand.social.facebook_url} className="text-ink no-underline text-[1rem] min-h-[44px] inline-flex items-center hover:underline underline-offset-[3px]" target="_blank" rel="noreferrer">Facebook</a></li>
+            <li><a href={`mailto:${site.brand.contact.email}`} className="text-ink no-underline text-[1rem] min-h-[44px] inline-flex items-center hover:underline underline-offset-[3px]">Email</a></li>
           </ul>
         </div>
       </div>

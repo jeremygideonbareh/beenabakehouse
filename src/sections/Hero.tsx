@@ -25,7 +25,7 @@ export function Hero() {
   });
 
   return (
-    <header className="relative min-h-svh grid grid-rows-[1fr_auto] pt-[6rem] pb-[clamp(3rem,6vw,5rem)] px-[clamp(1.25rem,5vw,6rem)] overflow-hidden" id="hero">
+    <header className="relative min-h-svh grid grid-rows-[1fr_auto] pt-[6rem] pb-[clamp(3rem,6vw,5rem)] px-[clamp(1.25rem,5vw,6rem)] overflow-hidden scroll-mt-20" id="hero">
       <div className="absolute inset-0 -z-[1] overflow-hidden">
         <motion.img
           src={hero.image_primary.url}
