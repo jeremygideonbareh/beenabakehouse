@@ -1,7 +1,6 @@
 import { type ReactNode, useRef } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { usePrefersCoarsePointer, usePrefersReducedMotion } from "../hooks/useMediaQuery";
-import "./LinkUnderline.css";
 
 interface Props {
   href?: string;
@@ -55,14 +54,14 @@ export function MagneticLink({
       onMouseMove={onMouseMove}
       onMouseLeave={onMouseLeave}
       style={{ x: sx, y: sy }}
-      className={`link-underline ${className}`.trim()}
+      className={`relative inline-block text-ink no-underline ${className}`.trim()}
       target={target}
       rel={rel}
       aria-label={rest["aria-label"]}
     >
       {children}
-      <svg viewBox="0 0 100 6" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M1 3 H99" />
+      <svg viewBox="0 0 100 6" preserveAspectRatio="none" aria-hidden="true" className="block absolute left-0 -bottom-[3px] w-full h-2 pointer-events-none overflow-visible">
+        <path d="M1 3 H99" className="fill-none stroke-ink stroke-[1.4] stroke-linecap-round stroke-dasharray-[1] stroke-dashoffset-[1] transition-[stroke-dashoffset] duration-[0.36s] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:stroke-dashoffset-0" />
       </svg>
     </motion.a>
   );
