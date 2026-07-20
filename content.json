@@ -1,0 +1,301 @@
+{
+  "brand": {
+    "name": "Beena's Bake House",
+    "tagline_candidates": [
+      "Baked at home. Delivered with love. Since the turn of the century.",
+      "Twenty-five years of butter, flour and you.",
+      "Trivandrum's homemade cake, since 2000."
+    ],
+    "established_year_inferred": 2000,
+    "years_experience": 25,
+    "location": {
+      "city": "Thiruvananthapuram",
+      "city_short": "TVM",
+      "state": "Kerala",
+      "country": "India",
+      "service_area_note": "Home delivery within Trivandrum only. No walk-in storefront.",
+      "has_physical_storefront": false,
+      "exact_address_public": false,
+      "google_maps_listing_present": false
+    },
+    "owner_quote_facebook": "Let's face it, a nice creamy chocolate cake does a lot for a lot of people; it does for me.",
+    "instagram_bio_verbatim": "Homemade delicious fresh butter cakes | Affordable & Customisable | 25yrs~baking experience | Home delivery -TVM only",
+    "specialties": [
+      "homemade butter cakes",
+      "creamy chocolate cakes",
+      "customisable celebration cakes",
+      "made-to-order custom cakes",
+      "affordable pricing"
+    ],
+    "social": {
+      "instagram_handle": "beenasbakehouse",
+      "instagram_url": "https://www.instagram.com/beenasbakehouse",
+      "instagram_followers_confirmed": 948,
+      "instagram_posts_confirmed": 188,
+      "facebook_url": "https://www.facebook.com/beenasbakehouse",
+      "facebook_reviews_count": 27,
+      "facebook_recommend_pct": 88,
+      "facebook_hours_listed": "Always open",
+      "facebook_price_tier": "$ (inexpensive)"
+    },
+    "contact": {
+      "phone_primary": "+91 96330 44035",
+      "phone_primary_raw": "9633044035",
+      "whatsapp": "+91 98957 65653",
+      "whatsapp_raw": "919895765653",
+      "whatsapp_deep_link": "https://wa.me/919895765653",
+      "email": "beenabakehouse@gmail.com",
+      "existing_website_url": "beenasbakehouse.com",
+      "existing_website_status": "down (transport error as of research date)"
+    }
+  },
+  "design": {
+    "palette_name": "Confectionery Air",
+    "colors": {
+      "background": "#FBF7F0",
+      "surface": "#F7E4DF",
+      "accent_1_butter": "#FFE26E",
+      "accent_2_peach": "#FFCBA4",
+      "accent_3_mint": "#B8D4C2",
+      "text_primary": "#3A2E2A",
+      "text_muted": "#6B5852",
+      "hairline": "#E8DCC9"
+    },
+    "typography": {
+      "display": "Fraunces",
+      "body": "Inter",
+      "accent_serif_italic": "Cormorant Garamond",
+      "mono": "JetBrains Mono",
+      "google_fonts_link": "https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,300..500&family=Inter:wght@400;500;600&family=Cormorant+Garamond:ital,wght@1,400&family=JetBrains+Mono:wght@400;500&display=swap",
+      "scale": {
+        "hero_display": { "desktop_px": 144, "mobile_px": 56, "font": "Fraunces", "weight": 400, "italic_optical": true },
+        "h2": { "desktop_px": 64, "mobile_px": 36, "font": "Fraunces", "weight": 400 },
+        "h3": { "desktop_px": 40, "mobile_px": 28, "font": "Fraunces", "weight": 500 },
+        "body_lg": { "desktop_px": 20, "mobile_px": 18, "font": "Inter", "weight": 400 },
+        "body": { "desktop_px": 17, "mobile_px": 16, "font": "Inter", "weight": 400 },
+        "caption": { "desktop_px": 13, "mobile_px": 12, "font": "JetBrains Mono", "weight": 500 },
+        "eyebrow": { "desktop_px": 12, "mobile_px": 11, "font": "JetBrains Mono", "weight": 500, "uppercase": true, "letter_spacing_em": 0.14 }
+      }
+    },
+    "motion": {
+      "kinetic_loader_duration_ms": 1400,
+      "kinetic_loader_steps": [
+        { "t_start_ms": 0, "t_end_ms": 600, "step": "Bone Cream (#FBF7F0) full-screen flash; \"Beena's Bake House\" wordmark draws in via SVG stroke-dasharray in Deep Cocoa (#3A2E2A), Fraunces italic." },
+        { "t_start_ms": 600, "t_end_ms": 1000, "step": "Butter Yellow (#FFE26E) pill slides in from bottom; eyebrow \"Est. 2000 · Trivandrum\" in JetBrains Mono." },
+        { "t_start_ms": 1000, "t_end_ms": 1400, "step": "Butter Yellow curtain wipes down-out via clip-path; hero image resolves opacity 0->1 + scale 1.08->1." }
+      ],
+      "page_transition_ms": 620,
+      "page_transition_color": "#FFE26E",
+      "scroll_engine": "Lenis lerp 0.1",
+      "animation_libs": ["GSAP", "@gsap/react", "ScrollTrigger", "Framer Motion", "Lenis"],
+      "respects_prefers_reduced_motion": true,
+      "custom_cursor": {
+        "default_px": 6,
+        "link_hover_px": 40,
+        "default_color": "#3A2E2A",
+        "menu_section_cursor": "small croissant SVG (32px)",
+        "hidden_on": ["(pointer: coarse)", "prefers-reduced-motion: reduce"]
+      }
+    }
+  },
+  "hero": {
+    "eyebrow": "Est. 2000 · Trivandrum · Homemade",
+    "title_lines": ["Twenty-five years", "of baking home."],
+    "subtitle": "Custom butter cakes, made to order, delivered across Trivandrum.",
+    "primary_cta": { "label": "Order a cake", "action": "scroll_to_contact" },
+    "secondary_cta": { "label": "See our cakes", "action": "scroll_to_signature" },
+    "image_primary": {
+      "pexels_id": 37290074,
+      "url": "https://images.pexels.com/photos/37290074/pexels-photo-37290074.jpeg?auto=compress&cs=tinysrgb&w=2400&q=80",
+      "alt": "Baker's hands shaping pita dough on a flour-dusted wooden board in warm light",
+      "credit": "Pexels (royalty-free)"
+    },
+    "image_alt": {
+      "pexels_id": 30403209,
+      "url": "https://images.pexels.com/photos/30403209/pexels-photo-30403209.jpeg?auto=compress&cs=tinysrgb&w=2400&q=80",
+      "alt": "Tight stack of freshly baked golden, flaky croissants",
+      "credit": "Pexels (royalty-free)"
+    }
+  },
+  "story": {
+    "eyebrow": "Our Story",
+    "h2": "A quarter-century in a Kerala kitchen",
+    "paragraphs": [
+      "What began in the year 2000 as a single home oven and a handwritten order book has grown into twenty-five years of butter cakes, weddings, birthdays, and everyday indulgences delivered across Trivandrum.",
+      "Every cake is still made to order, by hand, in our home kitchen. No walk-in counters, no shortcuts — just fresh butter, real chocolate, and the recipes that have kept Trivandrum celebrating for a generation.",
+      "We are proud that 88% of customers who reviewed us on Facebook recommend us to their friends. That is the whole point of Beena's Bake House."
+    ],
+    "pull_quote": {
+      "text": "Let's face it, a nice creamy chocolate cake does a lot for a lot of people; it does for me.",
+      "attribution": "Beena, on why she bakes",
+      "source": "facebook_business_page_quote"
+    },
+    "images": [
+      { "pexels_id": 6280041, "url": "https://images.pexels.com/photos/6280041/pexels-photo-6280041.jpeg?auto=compress&cs=tinysrgb&w=1600&q=80", "alt": "Close-up of hands mixing flour on a weathered wooden board" },
+      { "pexels_id": 27564591, "url": "https://images.pexels.com/photos/27564591/pexels-photo-27564591.jpeg?auto=compress&cs=tinysrgb&w=1600&q=80", "alt": "Baker's hands kneading dough with motion blur" },
+      { "pexels_id": 18420537, "url": "https://images.pexels.com/photos/18420537/pexels-photo-18420537.jpeg?auto=compress&cs=tinysrgb&w=1600&q=80", "alt": "Bakery window full of bread loaves with warm interior glow" }
+    ]
+  },
+  "signature_cakes": {
+    "eyebrow": "Signature Cakes",
+    "h2": "Made to order, made for you",
+    "items": [
+      {
+        "name": "Pastel Macarons Tower",
+        "summary": "Hand-piped almond macarons in mint and blush, with eucalyptus styling.",
+        "price_placeholder_inr": "₹450 / dozen",
+        "image": { "pexels_id": 8625947, "url": "https://images.pexels.com/photos/8625947/pexels-photo-8625947.jpeg?auto=compress&cs=tinysrgb&w=800&q=80", "alt": "Pastel mint and blush macarons on weathered grey wood with eucalyptus" }
+      },
+      {
+        "name": "Buttery Croissants",
+        "summary": "36-hour laminated dough, fresh every morning by special order.",
+        "price_placeholder_inr": "₹80 / piece",
+        "image": { "pexels_id": 30403209, "url": "https://images.pexels.com/photos/30403209/pexels-photo-30403209.jpeg?auto=compress&cs=tinysrgb&w=800&q=80", "alt": "Stack of flaky golden croissants" }
+      },
+      {
+        "name": "Celebration Buttercream Cake",
+        "summary": "Yellow buttercream, macarons and gold leaf — the anniversary classic.",
+        "price_placeholder_inr": "₹1,200 / kg",
+        "image": { "pexels_id": 5691261, "url": "https://images.pexels.com/photos/5691261/pexels-photo-5691261.jpeg?auto=compress&cs=tinysrgb&w=800&q=80", "alt": "Elegant pastel yellow celebration cake with macarons" }
+      },
+      {
+        "name": "Deep Chocolate Cake",
+        "summary": "The cake we are known for — deep cocoa, real butter, delivered to your door.",
+        "price_placeholder_inr": "₹900 / kg",
+        "image": { "pexels_id": 15564375, "url": "https://images.pexels.com/photos/15564375/pexels-photo-15564375.jpeg?auto=compress&cs=tinysrgb&w=800&q=80", "alt": "Rich chocolate cake with glaze on a wooden board" }
+      },
+      {
+        "name": "Country Sourdough",
+        "summary": "For when a cake isn't quite right — long-fermented, hand-scored.",
+        "price_placeholder_inr": "₹250 / loaf",
+        "image": { "pexels_id": 36202913, "url": "https://images.pexels.com/photos/36202913/pexels-photo-36202913.jpeg?auto=compress&cs=tinysrgb&w=800&q=80", "alt": "Round sourdough loaf with scored crust on a cutting board" }
+      }
+    ],
+    "price_disclaimer": "Prices are placeholders for layout. Final prices confirmed with Beena on order."
+  },
+  "menu": {
+    "eyebrow": "The Menu",
+    "h2": "Affordable & customisable",
+    "subtitle": "Every order is made fresh — please call or WhatsApp to confirm availability.",
+    "categories": [
+      {
+        "name": "Cakes",
+        "items": [
+          { "name": "Vanilla Butter Cake", "price_placeholder_inr": "₹700 / kg" },
+          { "name": "Chocolate Butter Cake", "price_placeholder_inr": "₹900 / kg" },
+          { "name": "Custom Celebration Cake", "price_placeholder_inr": "₹1,200 / kg" },
+          { "name": "Photo Cake", "price_placeholder_inr": "₹1,400 / kg" }
+        ]
+      },
+      {
+        "name": "Treats",
+        "items": [
+          { "name": "Macarons", "price_placeholder_inr": "₹450 / dozen" },
+          { "name": "Croissants", "price_placeholder_inr": "₹80 / piece" },
+          { "name": "Assorted Cookies", "price_placeholder_inr": "₹300 / box" },
+          { "name": "Cupcakes", "price_placeholder_inr": "₹120 / piece" }
+        ]
+      },
+      {
+        "name": "Breads",
+        "items": [
+          { "name": "Country Sourdough", "price_placeholder_inr": "₹250 / loaf" },
+          { "name": "Whole Wheat Loaf", "price_placeholder_inr": "₹180 / loaf" }
+        ]
+      }
+    ]
+  },
+  "gallery": {
+    "eyebrow": "From Our Kitchen",
+    "h2": "Twenty-five years, in photographs",
+    "images": [
+      { "pexels_id": 17057406, "url": "https://images.pexels.com/photos/17057406/pexels-photo-17057406.jpeg?auto=compress&cs=tinysrgb&w=1000&q=80", "alt": "Close-up of assorted bakery products in soft window light" },
+      { "pexels_id": 29170275, "url": "https://images.pexels.com/photos/29170275/pexels-photo-29170275.jpeg?auto=compress&cs=tinysrgb&w=1000&q=80", "alt": "Assorted donuts neatly lined up in a bakery display" },
+      { "pexels_id": 28495593, "url": "https://images.pexels.com/photos/28495593/pexels-photo-28495593.jpeg?auto=compress&cs=tinysrgb&w=1000&q=80", "alt": "Gourmet cookies in a café patisserie display case" },
+      { "pexels_id": 30822876, "url": "https://images.pexels.com/photos/30822876/pexels-photo-30822876.jpeg?auto=compress&cs=tinysrgb&w=1000&q=80", "alt": "Close-up of a single glazed donut in a box" },
+      { "pexels_id": 35156656, "url": "https://images.pexels.com/photos/35156656/pexels-photo-35156656.jpeg?auto=compress&cs=tinysrgb&w=1000&q=80", "alt": "Animal cookies baking in an oven with golden glow" }
+    ]
+  },
+  "process": {
+    "eyebrow": "The Craft",
+    "h2": "How each cake is made",
+    "steps": [
+      { "step": 1, "title": "Order", "body": "Call or WhatsApp. Tell us the occasion, flavours, and number of guests." },
+      { "step": 2, "title": "Plan", "body": "We work out size, design and price together. No surprises." },
+      { "step": 3, "title": "Bake", "body": "Fresh butter, real chocolate, made-by-hand, the morning of delivery." },
+      { "step": 4, "title": "Deliver", "body": "Across Trivandrum, to your door, ready to celebrate." }
+    ],
+    "images": [
+      { "pexels_id": 15577266, "url": "https://images.pexels.com/photos/15577266/pexels-photo-15577266.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80", "alt": "Hand scoring bread dough" },
+      { "pexels_id": 37888518, "url": "https://images.pexels.com/photos/37888518/pexels-photo-37888518.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80", "alt": "Chef dusting pastry with powdered sugar" },
+      { "pexels_id": 18613262, "url": "https://images.pexels.com/photos/18613262/pexels-photo-18613262.jpeg?auto=compress&cs=tinysrgb&w=1200&q=80", "alt": "Hand placing fresh berries on a chocolate-glazed celebration cake" }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Kind Words",
+    "h2": "88% of our reviewers recommend us",
+    "aggregate": {
+      "source": "Facebook business page",
+      "reviews_count": 27,
+      "recommend_pct": 88,
+      "note": "Aggregate data verified via Facebook public listing. Individual review text could not be retrieved without Facebook login — replace placeholders with real quotes from your Facebook Reviews."
+    },
+    "items": [
+      { "quote_placeholder": "Beena made our daughter's birthday unforgettable. The chocolate cake was the talk of the party.", "name_placeholder": "Reviewer, Trivandrum", "source": "Facebook (placeholder — replace with real review text)" },
+      { "quote_placeholder": "Twenty-five years of consistent quality. We order every anniversary.", "name_placeholder": "Reviewer, Trivandrum", "source": "Facebook (placeholder — replace with real review text)" },
+      { "quote_placeholder": "Affordable, customisable, and delivered on time, every time.", "name_placeholder": "Reviewer, Trivandrum", "source": "Facebook (placeholder — replace with real review text)" }
+    ]
+  },
+  "visit_contact": {
+    "eyebrow": "Visit & Order",
+    "h2": "Let's bake something together",
+    "phone": "+91 96330 44035",
+    "whatsapp_deep_link": "https://wa.me/919895765653",
+    "whatsapp_display": "+91 98957 65653",
+    "email": "beenabakehouse@gmail.com",
+    "instagram_url": "https://www.instagram.com/beenasbakehouse",
+    "facebook_url": "https://www.facebook.com/beenasbakehouse",
+    "service_area": "Thiruvananthapuram (Trivandrum), Kerala, India — home delivery only, no storefront.",
+    "hours_note": "Available by phone and WhatsApp. Fresh bakes by order; please allow advance notice for celebration cakes.",
+    "map_embed": {
+      "type": "google_maps_service_area",
+      "query": "Thiruvananthapuram, Kerala, India",
+      "embed_url_template": "https://www.google.com/maps?q=Thiruvananthapuram%2C+Kerala%2C+India&output=embed"
+    },
+    "order_form": {
+      "type": "whatsapp_deep_link",
+      "fields": ["name", "occasion", "cake_type", "quantity", "delivery_date", "notes"],
+      "whatsapp_message_template": "Hi Beena's Bake House! I'd like to order a cake. Occasion: {occasion}, Type: {cake_type}, Quantity: {quantity}, Delivery date: {delivery_date}, Notes: {notes}"
+    }
+  },
+  "footer": {
+    "marquee_words": ["Trivandrum", "Since 2000", "Homemade", "Delivered", "Beena's Bake House"],
+    "columns": {
+      "order": ["Order a cake", "WhatsApp us", "Call us"],
+      "about": ["Our 25 years", "Signature cakes", "Gallery"],
+      "visit": ["Service area: Trivandrum", "Hours: by phone/WhatsApp", "Home delivery only"],
+      "follow": ["Instagram", "Facebook", "Email"]
+    },
+    "legal": "© 2000–2026 Beena's Bake House. All rights reserved."
+  },
+  "images_format_reference": {
+    "pexels_url_pattern": "https://images.pexels.com/photos/{ID}/pexels-photo-{ID}.jpeg?auto=compress&cs=tinysrgb&w={WIDTH}&q={QUALITY}",
+    "size_recommendations": {
+      "hero_full_bleed": "w=2400&q=80",
+      "section_feature": "w=1600&q=80",
+      "product_card": "w=800&q=80",
+      "thumbnail": "w=400&q=75",
+      "lazy_mobile": "w=600&q=70"
+    },
+    "license": "Pexels License — royalty-free, attribution appreciated but not required. Plan: download and self-host on Vercel for production; use hot-link URLs during build."
+  },
+  "reference_sites_awwwards_verified": [
+    { "name": "Bernice Bakery", "url": "https://bernicebakery.com/", "why": "Cookie crumbs cursor, kinetic bakery microinteractions (HM Feb 2025)" },
+    { "name": "Café Binocle", "url": "https://www.cafebinocle.com/", "why": "Cream + butter palette (HM Apr 2026)" },
+    { "name": "Sonoma Bakery", "url": "https://sonomabakery.com/", "why": "Long-established editorial heritage tone (HM Jun 2022)" },
+    { "name": "Flora Café", "url": "https://www.florawellnesscafe.com/", "why": "Italic serif headlines, illustration warmth (Nominee 2026)" },
+    { "name": "Lula Avocado Oil", "url": "https://lulaoil.com/", "why": "Premium product-led storytelling (Nominee 2026)" },
+    { "name": "Crav Burgers", "url": "https://www.cravburgers.shop/", "why": "Loader + page-transition + footer marquee (SOTD Jun 2026)" },
+    { "name": "Mah Ze Dahr Bakery", "url": "http://mahzedahrbakery.com/", "why": "Premium patisserie tone (SOTD 2013)" }
+  ]
+}

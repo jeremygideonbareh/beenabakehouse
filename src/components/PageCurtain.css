@@ -1,0 +1,14 @@
+.page-curtain {
+  position: fixed;
+  inset: 0;
+  z-index: 9500;
+  pointer-events: none;
+  background: var(--color-butter);
+  transform: translateY(101%);
+}
+.page-curtain.is-entering {
+  transform: translateY(0%);
+}
+.page-curtain.is-leaving {
+  transform: translateY(-101%);
+}

@@ -1,0 +1,46 @@
+.pill {
+  --pill-bg: var(--color-butter);
+  --pill-ink: var(--color-ink);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  padding: 0.75rem 1.5rem;
+  background: var(--pill-bg);
+  color: var(--pill-ink);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  transition: transform 0.4s var(--ease-overshoot), background-color 0.3s var(--ease-soft);
+  will-change: transform;
+  cursor: pointer;
+}
+.pill:hover {
+  transform: translateY(-2px);
+}
+.pill--ghost {
+  --pill-bg: transparent;
+  --pill-ink: var(--color-ink);
+  border-color: var(--color-ink);
+}
+.pill--ghost:hover {
+  background: var(--color-ink);
+  color: var(--color-bg);
+}
+.pill--peach {
+  --pill-bg: var(--color-peach);
+  --pill-ink: var(--color-ink);
+}
+.pill:focus-visible {
+  outline: 2px solid var(--color-ink);
+  outline-offset: 4px;
+}
+.pill[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
