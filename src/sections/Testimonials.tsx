@@ -7,7 +7,7 @@ export function Testimonials() {
   const { testimonials } = site;
 
   return (
-    <section className="bg-surface rounded-[clamp(1rem,3vw,2rem)] mx-[clamp(1rem,4vw,4rem)] p-[clamp(3rem,7vw,6rem)] pt-[clamp(5rem,12vw,11rem)] pb-[clamp(5rem,12vw,11rem)] scroll-mt-20" id="testimonials" aria-label="Testimonials">
+    <section className="bg-surface rounded-[clamp(1rem,3vw,2rem)] max-md:rounded-[clamp(0.75rem,2vw,1rem)] mx-0 md:mx-[clamp(1rem,4vw,4rem)] p-[clamp(1.25rem,5vw,3rem)] md:p-[clamp(3rem,7vw,6rem)] pt-[clamp(5rem,12vw,11rem)] pb-[clamp(5rem,12vw,11rem)] scroll-mt-20" id="testimonials" aria-label="Testimonials">
       <div className="flex flex-col gap-4 mb-12 max-w-[50ch]">
         <span className="font-mono text-eyebrow tracking-[0.18em] uppercase text-ink-muted inline-flex items-center gap-[0.6rem]">{testimonials.eyebrow}</span>
         <motion.h2
@@ -30,7 +30,7 @@ export function Testimonials() {
         </div>
       </div>
 
-      <div className="grid grid-cols-[repeat(auto-fit,minmax(260px,1fr))] gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {testimonials.items.map((t, i) => (
           <motion.figure
             key={i}

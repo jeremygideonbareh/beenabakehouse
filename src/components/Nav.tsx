@@ -1,9 +1,17 @@
 import { useEffect, useState, useCallback } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import { scrollToId } from "../lib/SmoothScroll";
 import {
+  Sheet,
+  SheetTrigger,
+  SheetContent,
+  SheetHeader,
+  SheetTitle,
+  SheetDescription,
+  SheetFooter,
+} from "./ui/sheet";
+import {
   Menu,
-  X,
   BookOpen,
   CakeSlice,
   UtensilsCrossed,
@@ -21,31 +29,6 @@ const links = [
   { label: "Reviews", id: "testimonials", icon: Star, description: "What customers say" },
 ];
 
-const backdropVariants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { duration: 0.25 } },
-  exit: { opacity: 0, transition: { duration: 0.2, delay: 0.05 } },
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, scale: 0.92 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      type: "spring",
-      damping: 18,
-      stiffness: 280,
-      mass: 0.9,
-    },
-  },
-  exit: {
-    opacity: 0,
-    scale: 0.92,
-    transition: { duration: 0.15, ease: "easeIn" },
-  },
-};
-
 const containerVariants = {
   hidden: { opacity: 1 },
   visible: { transition: { staggerChildren: 0.04, delayChildren: 0.08 } },
@@ -56,13 +39,13 @@ const itemVariants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.3, ease: [0.22, 1, 0.36, 1] },
+    transition: { duration: 0.3, ease: [0.22, 1, 0.36, 1] as const },
   },
 };
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 80);
@@ -71,17 +54,8 @@ export function Nav() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => {
-    if (menuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => { document.body.style.overflow = ""; };
-  }, [menuOpen]);
-
   const handleNav = useCallback((id: string) => {
-    setMenuOpen(false);
+    setOpen(false);
     /* small delay so the exit animation plays before scrolling */
     setTimeout(() => scrollToId(id), 200);
   }, []);
@@ -116,98 +90,78 @@ export function Nav() {
         >
           Order
         </button>
-        <button
-          className="flex md:hidden min-h-[44px] min-w-[44px] items-center justify-center p-3 text-ink-muted hover:text-ink transition-colors cursor-pointer"
-          onClick={() => setMenuOpen(true)}
-          aria-label="Open menu"
-        >
-          <Menu size={20} />
-        </button>
-      </nav>
 
-      <AnimatePresence>
-        {menuOpen && (
-          <motion.div
-            className="fixed inset-0 z-[200] flex items-center justify-center p-4"
-            variants={backdropVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
+        <Sheet open={open} onOpenChange={setOpen}>
+          <SheetTrigger
+            render={
+              <button
+                className="flex md:hidden min-h-[44px] min-w-[44px] items-center justify-center p-3 text-ink-muted hover:text-ink transition-colors cursor-pointer"
+                aria-label="Open menu"
+              />
+            }
           >
-            <motion.div
-              className="absolute inset-0 bg-black/30 backdrop-blur-md"
-              variants={backdropVariants}
-              onClick={() => setMenuOpen(false)}
-            />
+            <Menu size={20} />
+          </SheetTrigger>
+
+          <SheetContent
+            side="right"
+            className="w-full max-w-[min(100vw,24rem)] sm:max-w-md border-l border-hairline bg-background p-0"
+          >
+            <SheetHeader className="px-6 pt-8 pb-4 border-b border-hairline text-left">
+              <SheetTitle className="font-display text-xl text-ink font-[400] tracking-[-0.02em] block">
+                Beena's Bake House
+              </SheetTitle>
+              <SheetDescription className="font-mono text-[0.65rem] tracking-[0.12em] uppercase text-ink-muted">
+                Menu
+              </SheetDescription>
+            </SheetHeader>
 
             <motion.div
-              className="relative w-full max-w-sm rounded-2xl border border-white/20 bg-stone-50/70 backdrop-blur-2xl shadow-2xl overflow-hidden"
-              variants={cardVariants}
+              className="flex-1 overflow-y-auto px-3 py-4 flex flex-col gap-0.5"
+              variants={containerVariants}
               initial="hidden"
               animate="visible"
-              exit="exit"
-              onClick={(e) => e.stopPropagation()}
             >
-              <div className="flex items-center justify-between px-6 pt-6 pb-3 border-b border-stone-200/50">
-                <span className="font-display text-xl text-ink font-[400] tracking-[-0.02em]">
-                  Beena's Bake House
-                </span>
-                <button
-                  className="min-h-[44px] min-w-[44px] flex items-center justify-center text-ink-muted hover:text-ink transition-colors"
-                  onClick={() => setMenuOpen(false)}
-                  aria-label="Close menu"
-                >
-                  <X size={18} />
-                </button>
-              </div>
-
-              <motion.div
-                className="px-4 py-5 flex flex-col gap-0.5"
-                variants={containerVariants}
-                initial="hidden"
-                animate="visible"
-              >
-                {links.map((l, i) => {
-                  const Icon = l.icon;
-                  return (
-                    <motion.button
-                      key={l.id}
-                      variants={itemVariants}
-                      className="flex items-center gap-3 w-full px-3 py-3 rounded-xl hover:bg-white/60 transition-colors text-left group cursor-pointer"
-                      onClick={() => handleNav(l.id)}
-                    >
-                      <span className="font-mono text-[0.6rem] tracking-[0.1em] text-ink-muted/50 w-5 shrink-0">
-                        {String(i + 1).padStart(2, "0")}
+              {links.map((l, i) => {
+                const Icon = l.icon;
+                return (
+                  <motion.button
+                    key={l.id}
+                    variants={itemVariants}
+                    className="flex items-center gap-3 w-full px-3 py-3 rounded-xl hover:bg-[rgba(58,46,42,0.04)] transition-colors text-left group cursor-pointer"
+                    onClick={() => handleNav(l.id)}
+                  >
+                    <span className="font-mono text-[0.6rem] tracking-[0.1em] text-ink-muted/50 w-5 shrink-0">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <Icon
+                      size={16}
+                      className="text-ink-muted shrink-0 group-hover:text-ink transition-colors"
+                    />
+                    <div className="flex flex-col min-w-0">
+                      <span className="font-display text-lg text-ink font-[400] leading-tight">
+                        {l.label}
                       </span>
-                      <Icon
-                        size={16}
-                        className="text-ink-muted shrink-0 group-hover:text-ink transition-colors"
-                      />
-                      <div className="flex flex-col">
-                        <span className="font-display text-lg text-ink font-[400] leading-tight">
-                          {l.label}
-                        </span>
-                        <span className="font-mono text-[0.6rem] text-ink-muted tracking-[0.05em]">
-                          {l.description}
-                        </span>
-                      </div>
-                    </motion.button>
-                  );
-                })}
-              </motion.div>
-
-              <div className="px-6 pb-6 pt-3 border-t border-stone-200/50">
-                <button
-                  className="w-full min-h-[48px] rounded-full bg-accent-butter text-ink font-[500] text-base transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
-                  onClick={() => handleNav("visit")}
-                >
-                  Order a cake
-                </button>
-              </div>
+                      <span className="font-mono text-[0.6rem] text-ink-muted tracking-[0.05em] truncate">
+                        {l.description}
+                      </span>
+                    </div>
+                  </motion.button>
+                );
+              })}
             </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+
+            <SheetFooter className="px-6 pb-8 pt-4 border-t border-hairline">
+              <button
+                onClick={() => handleNav("visit")}
+                className="w-full min-h-[48px] rounded-full bg-accent-butter text-ink font-[500] text-base transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
+              >
+                Order a cake
+              </button>
+            </SheetFooter>
+          </SheetContent>
+        </Sheet>
+      </nav>
     </>
   );
 }

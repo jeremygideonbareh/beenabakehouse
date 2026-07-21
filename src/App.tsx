@@ -53,10 +53,10 @@ function App() {
         );
       }
 
-      // Signature Cakes — horizontal scroll on the track.
+      // Signature Cakes — horizontal scroll on the track (desktop only).
       const track = document.querySelector<HTMLElement>(".signature__track");
       const signatureSection = document.querySelector<HTMLElement>("#signature");
-      if (track && signatureSection) {
+      if (track && signatureSection && window.matchMedia("(min-width: 768px)").matches) {
         const distance = () =>
           Math.max(0, track.scrollWidth - window.innerWidth + 80);
         gsap.to(track, {
@@ -73,7 +73,12 @@ function App() {
         });
       }
     });
-    return () => ctx.revert();
+    const onResize = () => ScrollTrigger.refresh();
+    window.addEventListener("resize", onResize);
+    return () => {
+      window.removeEventListener("resize", onResize);
+      ctx.revert();
+    };
   }, [loaded, reduced]);
 
   return (

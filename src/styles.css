@@ -17,6 +17,8 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+  max-width: 100vw;
+  overflow-x: hidden;
 }
 
 body {
@@ -34,6 +36,8 @@ body {
 #root {
   min-height: 100vh;
   position: relative;
+  max-width: 100vw;
+  overflow-x: clip;
 }
 
 img {
@@ -157,6 +161,15 @@ select {
   .section {
     padding-top: clamp(4rem, 16vw, 7rem);
     padding-bottom: clamp(4rem, 16vw, 7rem);
+  }
+  :root {
+    --max-bleed: 100vw;
+  }
+  html,
+  body,
+  #root {
+    max-width: 100vw;
+    overflow-x: hidden;
   }
 }
 

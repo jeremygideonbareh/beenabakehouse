@@ -31,7 +31,7 @@ export function Gallery() {
         </motion.h2>
       </div>
 
-      <div className="max-w-[1600px] mx-auto px-[clamp(1.25rem,5vw,6rem)] grid grid-cols-6 gap-[clamp(0.6rem,1.4vw,1.2rem)] max-md:grid-cols-2 snap-x snap-mandatory scrollbar-hide">
+      <div className="max-w-[1600px] mx-auto px-[clamp(1.25rem,5vw,6rem)] max-md:px-[clamp(1.25rem,5vw,2rem)] grid grid-cols-6 gap-[clamp(0.6rem,1.4vw,1.2rem)] max-md:grid-cols-2 max-md:gap-[0.6rem]">
         {gallery.images.map((img, i) => (
           <motion.figure
             key={img.pexels_id}

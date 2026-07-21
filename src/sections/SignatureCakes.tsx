@@ -31,15 +31,15 @@ export function SignatureCakes() {
       </div>
 
       <div
-        className="flex gap-[clamp(1.5rem,3vw,3rem)] px-[clamp(1.25rem,5vw,6rem)] overflow-x-auto snap-x snap-mandatory scrollbar-hide [&::-webkit-scrollbar]:hidden scrollbar-none"
+        className="signature__track flex flex-col md:flex-row gap-[clamp(1.5rem,5vw,3rem)] px-[clamp(1.25rem,5vw,6rem)] max-md:px-[clamp(1.25rem,5vw,2rem)] md:overflow-x-auto md:snap-x md:snap-mandatory scrollbar-hide [&::-webkit-scrollbar]:hidden"
         data-cursor="croissant"
         role="list"
-        aria-label="Signature cakes carousel — scroll horizontally"
+        aria-label="Signature cakes carousel"
       >
         {signature_cakes.items.map((item, i) => (
           <motion.article
             key={item.name}
-            className="group flex-[0_0_clamp(280px,32vw,380px)] snap-center flex flex-col gap-4 bg-transparent"
+            className="group md:flex-[0_0_clamp(280px,32vw,380px)] md:snap-center max-md:w-full flex flex-col gap-4 bg-transparent"
             role="listitem"
             initial={{ opacity: reduced ? 1 : 0, y: reduced ? 0 : 30 }}
             whileInView={{ opacity: 1, y: 0 }}
