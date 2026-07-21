@@ -105,15 +105,15 @@
     "primary_cta": { "label": "Order a cake", "action": "scroll_to_contact" },
     "secondary_cta": { "label": "See our cakes", "action": "scroll_to_signature" },
     "image_primary": {
-      "pexels_id": 37290074,
-      "url": "https://images.pexels.com/photos/37290074/pexels-photo-37290074.jpeg?auto=compress&cs=tinysrgb&w=2400&q=80",
-      "alt": "Baker's hands shaping pita dough on a flour-dusted wooden board in warm light",
+      "pexels_id": 16406494,
+      "url": "https://images.pexels.com/photos/16406494/pexels-photo-16406494.jpeg?auto=compress&cs=tinysrgb&w=2400&q=80",
+      "alt": "Closeup of rich chocolate cake decorated with fresh strawberries, warm brown and red tones, shallow depth-of-field",
       "credit": "Pexels (royalty-free)"
     },
     "image_alt": {
-      "pexels_id": 30403209,
-      "url": "https://images.pexels.com/photos/30403209/pexels-photo-30403209.jpeg?auto=compress&cs=tinysrgb&w=2400&q=80",
-      "alt": "Tight stack of freshly baked golden, flaky croissants",
+      "pexels_id": 37290074,
+      "url": "https://images.pexels.com/photos/37290074/pexels-photo-37290074.jpeg?auto=compress&cs=tinysrgb&w=2400&q=80",
+      "alt": "Baker's hands shaping pita dough on a flour-dusted wooden board in warm light",
       "credit": "Pexels (royalty-free)"
     }
   },
