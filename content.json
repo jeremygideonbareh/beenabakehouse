@@ -181,26 +181,26 @@
       {
         "name": "Cakes",
         "items": [
-          { "name": "Vanilla Butter Cake", "price_placeholder_inr": "₹700 / kg" },
-          { "name": "Chocolate Butter Cake", "price_placeholder_inr": "₹900 / kg" },
-          { "name": "Custom Celebration Cake", "price_placeholder_inr": "₹1,200 / kg" },
-          { "name": "Photo Cake", "price_placeholder_inr": "₹1,400 / kg" }
+          { "name": "Vanilla Butter Cake", "price_placeholder_inr": "₹700 / kg", "image": { "pexels_id": 15704924, "url": "https://images.pexels.com/photos/15704924/pexels-photo-15704924.jpeg?auto=compress&cs=tinysrgb&w=800&q=80", "alt": "Vanilla butter cake slice on a plate" } },
+          { "name": "Chocolate Butter Cake", "price_placeholder_inr": "₹900 / kg", "image": { "pexels_id": 15564375, "url": "https://images.pexels.com/photos/15564375/pexels-photo-15564375.jpeg?auto=compress&cs=tinysrgb&w=800&q=80", "alt": "Rich chocolate cake with glaze on a wooden board" } },
+          { "name": "Custom Celebration Cake", "price_placeholder_inr": "₹1,200 / kg", "image": { "pexels_id": 5691261, "url": "https://images.pexels.com/photos/5691261/pexels-photo-5691261.jpeg?auto=compress&cs=tinysrgb&w=800&q=80", "alt": "Elegant pastel yellow celebration cake with macarons" } },
+          { "name": "Photo Cake", "price_placeholder_inr": "₹1,400 / kg", "image": { "pexels_id": 17057406, "url": "https://images.pexels.com/photos/17057406/pexels-photo-17057406.jpeg?auto=compress&cs=tinysrgb&w=800&q=80", "alt": "Assorted bakery products in soft window light" } }
         ]
       },
       {
         "name": "Treats",
         "items": [
-          { "name": "Macarons", "price_placeholder_inr": "₹450 / dozen" },
-          { "name": "Croissants", "price_placeholder_inr": "₹80 / piece" },
-          { "name": "Assorted Cookies", "price_placeholder_inr": "₹300 / box" },
-          { "name": "Cupcakes", "price_placeholder_inr": "₹120 / piece" }
+          { "name": "Macarons", "price_placeholder_inr": "₹450 / dozen", "image": { "pexels_id": 8625947, "url": "https://images.pexels.com/photos/8625947/pexels-photo-8625947.jpeg?auto=compress&cs=tinysrgb&w=800&q=80", "alt": "Pastel mint and blush macarons on weathered grey wood" } },
+          { "name": "Croissants", "price_placeholder_inr": "₹80 / piece", "image": { "pexels_id": 30403209, "url": "https://images.pexels.com/photos/30403209/pexels-photo-30403209.jpeg?auto=compress&cs=tinysrgb&w=800&q=80", "alt": "Stack of flaky golden croissants" } },
+          { "name": "Assorted Cookies", "price_placeholder_inr": "₹300 / box", "image": { "pexels_id": 28495593, "url": "https://images.pexels.com/photos/28495593/pexels-photo-28495593.jpeg?auto=compress&cs=tinysrgb&w=800&q=80", "alt": "Gourmet cookies in a bakery display case" } },
+          { "name": "Cupcakes", "price_placeholder_inr": "₹120 / piece", "image": { "pexels_id": 14105, "url": "https://images.pexels.com/photos/14105/pexels-photo-14105.jpeg?auto=compress&cs=tinysrgb&w=800&q=80", "alt": "Assorted cupcakes with colorful icing and sprinkles" } }
         ]
       },
       {
         "name": "Breads",
         "items": [
-          { "name": "Country Sourdough", "price_placeholder_inr": "₹250 / loaf" },
-          { "name": "Whole Wheat Loaf", "price_placeholder_inr": "₹180 / loaf" }
+          { "name": "Country Sourdough", "price_placeholder_inr": "₹250 / loaf", "image": { "pexels_id": 36202913, "url": "https://images.pexels.com/photos/36202913/pexels-photo-36202913.jpeg?auto=compress&cs=tinysrgb&w=800&q=80", "alt": "Round sourdough loaf with scored crust on a cutting board" } },
+          { "name": "Whole Wheat Loaf", "price_placeholder_inr": "₹180 / loaf", "image": { "pexels_id": 1853940, "url": "https://images.pexels.com/photos/1853940/pexels-photo-1853940.jpeg?auto=compress&cs=tinysrgb&w=800&q=80", "alt": "Fresh whole wheat bread loaf with seeds" } }
         ]
       }
     ]
