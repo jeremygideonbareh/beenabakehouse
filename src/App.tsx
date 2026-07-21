@@ -17,12 +17,19 @@ import { Testimonials } from "./sections/Testimonials";
 import { VisitContact } from "./sections/VisitContact";
 import { Footer } from "./sections/Footer";
 import { usePrefersReducedMotion } from "./hooks/useMediaQuery";
+import { AdminPanel } from "./components/AdminPanel";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   const reduced = usePrefersReducedMotion();
   const [loaded, setLoaded] = useState(false);
+  const [admin, setAdmin] = useState(false);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get("admin") === "true") setAdmin(true);
+  }, []);
 
   // Initialize ScrollTrigger after content has painted and Lenis is wired.
   useEffect(() => {
@@ -110,6 +117,8 @@ function App() {
           <Footer />
         </MotionConfig>
       </SmoothScroll>
+
+      {admin && <AdminPanel onClose={() => setAdmin(false)} />}
     </>
   );
 }
